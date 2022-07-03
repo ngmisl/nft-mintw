@@ -26,6 +26,7 @@ contract EpicNFT is ERC721URIStorage {
 
     // The public function our user will hit to get their NFT.
     function makeAnNFT() public {
+        // set last transfer to check if eligible for claiming
         uint lastTransfer = lastTransfers[msg.sender];
 
         require(
