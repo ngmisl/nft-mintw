@@ -31,8 +31,8 @@ contract EpicNFT is ERC721URIStorage, Ownable {
         uint lastTransfer = lastTransfers[msg.sender];
 
         require(
-            lastTransfer + 24 hours <= block.timestamp,
-            "Patience is a virtue. You can only claim every 24 hours"
+            lastTransfer + 0.10 hours <= block.timestamp,
+            "Patience is a virtue. You can only claim every 6 minutes."
         );
 
         // Get the current tokenId, this starts at 0.
